@@ -648,8 +648,18 @@ a {
     }
 
     .bento-item {
-        padding: var(--spacing-md);
-        /* Smaller padding in cards */
+        padding: 1rem;
+        /* Even smaller padding in cards */
+    }
+
+    .credential-card h3 {
+        font-size: 1rem;
+        /* Smaller label */
+    }
+
+    .credential-card p {
+        font-size: 1.5rem;
+        /* Smaller value text */
     }
 
     .bento-grid {
