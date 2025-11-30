@@ -628,6 +628,23 @@ a {
     .hero-section {
         padding-top: var(--spacing-lg);
         /* Less padding on mobile */
+        background-attachment: scroll;
+        /* Fix for mobile browsers where fixed bg disappears */
+        background-position: center top;
+        /* Ensure face is visible if cropped */
+    }
+
+    .hero-title {
+        font-size: 2.5rem;
+        /* Smaller title for mobile */
+        padding: 0 1rem;
+        /* Prevent edge touching */
+    }
+
+    .hero-subtitle {
+        font-size: 1.1rem;
+        /* Smaller subtitle */
+        padding: 0 1rem;
     }
 
     .bento-item {
