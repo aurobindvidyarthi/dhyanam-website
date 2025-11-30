@@ -518,11 +518,21 @@ a {
 
 /* Redesigned Why Join Section */
 .benefits-list {
+    align-items: center;
+    text-align: left;
+    /* Keep text left aligned even if centered */
     list-style: none;
     margin-top: var(--spacing-md);
     display: flex;
     flex-direction: column;
     gap: var(--spacing-md);
+}
+
+@media (max-width: 768px) {
+    .benefits-list {
+        align-items: flex-start;
+        /* Align to start on mobile */
+    }
 }
 
 .benefit-item {
@@ -608,9 +618,68 @@ a {
     margin: 0 auto;
 }
 
-.benefits-list {
-    align-items: center;
-    /* Center list items */
+@media (max-width: 768px) {
+    .content-col.text-col {
+        width: 100%;
+        /* Full width on mobile */
+        padding: 0 var(--spacing-sm);
+    }
+
+    .hero-section {
+        padding-top: var(--spacing-lg);
+        /* Less padding on mobile */
+    }
+
+    .bento-item {
+        padding: var(--spacing-md);
+        /* Smaller padding in cards */
+    }
+
+    .bento-grid {
+        gap: var(--spacing-sm);
+        /* Smaller gap */
+    }
+
+    .section-label {
+        margin-bottom: var(--spacing-xs);
+    }
+
+    .objective-text {
+        font-size: 1.25rem;
+        /* Smaller font for objective */
+    }
+
+    /* Hide parallax image on mobile */
+    .parallax-section {
+        display: none;
+    }
+
+    /* Show nav links on mobile (overriding the previous display:none) */
+    .nav-links {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+        gap: 1rem;
+        margin-top: 1rem;
+    }
+
+    .nav-links a {
+        font-size: 0.85rem;
+    }
+
+    /* Adjust header to accommodate links */
+    .main-nav {
+        flex-direction: column;
+        align-items: flex-start;
+        /* Keep Dhyanam on left */
+        padding: 1rem;
+    }
+
+    .nav-cta {
+        display: none;
+        /* Hide CTA on mobile to save space if needed, or keep it */
+        margin-top: 1rem;
+    }
 }
 
 .benefit-item {
